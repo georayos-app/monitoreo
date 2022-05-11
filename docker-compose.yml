@@ -53,7 +53,9 @@ services:
     - 9100:9100
     command:
     - '--path.rootfs=/host'
+    - '--collector.textfile.directory=/textfile'
     pid: host
     volumes:
     - '/:/host:ro,rslave'
+    - './textfile:/textfile'
     
